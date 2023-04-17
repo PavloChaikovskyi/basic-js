@@ -25,6 +25,9 @@ function getSeason(date) {
   let current_season;
   function isValidDate(date) {
     try {
+      if (Object.getOwnPropertyNames(date).length !== 0) {
+        return false;
+      }
       if (!(date instanceof Date)) {
         return false;
       }
